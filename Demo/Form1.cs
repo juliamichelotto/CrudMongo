@@ -12,8 +12,7 @@ namespace Demo
         {
             repositorio = new Repositorio();
             bsAgenda.DataSource = repositorio;
-            bsAgenda.ResetBindings(false);
-            List<Agenda> lista = repositorio.ListaAgenda;
+          
 
         }
     }

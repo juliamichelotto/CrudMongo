@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.bsAgenda = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,34 +48,29 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bsAgenda;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 46);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 45);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(608, 282);
+            this.dataGridView1.Size = new System.Drawing.Size(554, 282);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
             // nomeDataGridViewTextBoxColumn
             // 
             this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.Width = 200;
             // 
             // enderecoDataGridViewTextBoxColumn
             // 
             this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
             this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
             this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoDataGridViewTextBoxColumn.Width = 200;
             // 
             // telefoneDataGridViewTextBoxColumn
             // 
@@ -103,7 +97,6 @@
 
         private BindingSource bsAgenda;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;

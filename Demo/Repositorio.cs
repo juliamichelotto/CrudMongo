@@ -13,14 +13,16 @@ namespace Demo
 
         public List<Agenda> ListaAgenda
         {
-            get { return _agenda.Find<Agenda>(_ => true).ToList<Agenda>(); }
+            get {
+                var filter = Builders<Agenda>.Filter.Empty;
+                return _agenda.Find<Agenda>(filter).ToList<Agenda>(); }
         }
 
         public Repositorio()
         {
             var mongoClient = new MongoClient("mongodb+srv://claudio:suamae123456@cluster0.e962m0s.mongodb.net/");
             var mongoDatabase = mongoClient.GetDatabase("apdesktop");
-            _agenda = mongoDatabase.GetCollection<Agenda>("Agenda");
+            _agenda = mongoDatabase.GetCollection<Agenda>("agenda");
 
         }
     }
