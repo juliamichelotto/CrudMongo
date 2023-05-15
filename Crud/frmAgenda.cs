@@ -1,9 +1,10 @@
-namespace Demo
+using DAL;
+namespace Crud
 {
-    public partial class Form1 : Form
+    public partial class frmAgenda : Form
     {
         private Repositorio repositorio;
-        public Form1()
+        public frmAgenda()
         {
             InitializeComponent();
         }
@@ -12,7 +13,7 @@ namespace Demo
         {
             repositorio = new Repositorio();
             bsAgenda.DataSource = repositorio;
-          
+
 
         }
     }
