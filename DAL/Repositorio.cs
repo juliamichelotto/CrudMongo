@@ -18,6 +18,24 @@ namespace DAL
                 return _agenda.Find<Agenda>(filter).ToList<Agenda>(); }
         }
 
+        public void Create(Agenda agenda)
+        {
+            _agenda.InsertOne(agenda);
+        }
+
+        public void Delete(Agenda agenda)
+        {
+            var filter = Builders<Agenda>.Filter.Eq("Id", agenda.Id);
+            _agenda.DeleteOne(filter);
+
+        }
+
+        public void Udpate (Agenda agenda)
+        {
+            var filter = Builders<Agenda>.Filter.Eq("Id", agenda.Id);
+            var update = Builders<Agenda>.Update.Set("Nome", agenda.Nome).Set("Telefone", agenda.Telefone).Set("Endereco", agenda.Endereco);
+        }
+
         public Repositorio()
         {
             var mongoClient = new MongoClient("mongodb+srv://claudio:suamae123456@cluster0.e962m0s.mongodb.net/");
